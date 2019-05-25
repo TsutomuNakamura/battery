@@ -15,7 +15,7 @@ func Info() (percent int, elapsed int, present bool, err error) {
 		return
 	}
 	if len(uevents) == 0 {
-		return
+		return 0, 0, false, fmt.Errorf("This machine doesn't have any batteries.");
 	}
 	var f *os.File
 	for _, u := range uevents {
