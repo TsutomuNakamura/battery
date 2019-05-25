@@ -6,6 +6,8 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+
+	"fmt"
 )
 
 func Info() (percent int, elapsed int, present bool, err error) {
